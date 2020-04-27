@@ -36,38 +36,43 @@ let month =['January',
             console.log(table);
             let HTML = '';
             
-    function New(data) {
-        let men=1;
+    function Render(data) {
+       
+    
     for (let i=0; i<data.length; i++) {
         HTML += `<div class="table-row">
-                <div class="cell">${men++}</div>
-                <div class="cell">   ${month[i]}</div>
+                <div class="cell">${i+1}</div>
+                <div class="cell">   ${month[account[i].month -1]}</div>
                 <div class="cell"> ${account[i].income  || 0}</div>
                 <div class="cell"> ${account[i].expense || 0}</div>
-                <div class="cell">${(account[i].income || 0) - (account[i].expense || 0) }</div>
+                <div class="cell">${(account[i].income  || 0) - (account[i].expense || 0) }</div>
             </div>`;
-    }
+        }
 
 }
             
-    New(month);
-
-    function sum(Dta, ) {
-    for (let a=0; a<Dta.length; a++) {
-        HTML += `<div class="table-footer">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell">0.00 Eur</div>
-            <div class="cell"></div>
-        </div>`;
+    Render(month);
+     
+    table.innerHTML = HTML;
+    console.log(account);
+    
+    function name(params) {
+        
     }
-    }
-            
- table.innerHTML = HTML;
-console.log(account);
-
+    // function sum(Dta, ) {
+    // for (let a=0; a<Dta.length; a++) {
+    //     HTML += `<div class="table-footer">
+    //         <div class="cell"></div>
+    //         <div class="cell"></div>
+    //         <div class="cell"></div>
+    //         <div class="cell">0.00 Eur</div>
+    //         <div class="cell"></div>
+    //     </div>`;
+    // }
+    // }
+    
 // function skay(month){
 // let monthsky=month
 
 // }
+
