@@ -48,7 +48,7 @@ let month =['January',
                 }
              }
             
-             get(months);
+             get(month);
             
               function sum(elem, ) {
                 for (let a=0; a<elem.length; a++) {
