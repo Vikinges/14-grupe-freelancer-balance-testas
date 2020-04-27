@@ -1,22 +1,22 @@
 import account from './data.js';
 
-class Month {
-    constructor(Month, income, expensive){
-    this.month=Month;
-    this.income=income;
-    this.expense=expensive;
-    this.init();
+// class Month {
+//     constructor(Month, income, expensive){
+//     this.month=Month;
+//     this.income=income;
+//     this.expense=expensive;
+//     this.init();
 
-    }
-   init(){
+//     }
+//    init(){
   
 
-   }
+//    }
 
 
-}
+// }
 
-let monthsh =['January', 
+let month =['January', 
             'February',
             'March' ,
             'April',
@@ -44,74 +44,74 @@ let rows=1;
 <div class="table-content">
 <div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell">${account[1].income - account[1].expense } Eur</div>
 </div>
 <div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[4].income} Eur</div>
 <div class="cell">${account[4].expense}</div>
-<div class="cell">${(account[1].income - account[1].expense) + (account[4].income - account[4].expense)} Eur</div>
+<div class="cell">${ (account[1].income - account[1].expense) + account[4].income } Eur</div>
 </div><div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell"> Eur</div>
 </div><div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell">${account[1].income - account[1].expense } Eur</div>
 </div><div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell">${account[1].income - account[1].expense } Eur</div>
 </div><div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell">${account[1].income - account[1].expense } Eur</div>
 </div><div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell">${account[1].income - account[1].expense } Eur</div>
 </div><div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell">${account[1].income - account[1].expense } Eur</div>
 </div><div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell">${account[1].income - account[1].expense } Eur</div>
 </div><div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell">${account[1].income - account[1].expense } Eur</div>
 </div><div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell">${account[1].income - account[1].expense } Eur</div>
 </div><div class="table-row">
 <div class="cell">${rows++}</div>
-<div class="cell">${monthsh[rows-2]}</div>
+<div class="cell">${month[rows-2]}</div>
 <div class="cell">${account[1].income} Eur</div>
 <div class="cell">${account[1].expense}</div>
 <div class="cell">${account[1].income - account[1].expense } Eur</div>
@@ -125,7 +125,10 @@ let rows=1;
                     <div class="cell">0.00 Eur</div>
                 </div>`    
 DOM.innerHTML = HTML;       
-// console.log(monthsh);
+// console.log(month);
 console.log(account);
 
-// function ()
+function skay(month){
+let monthsky=month
+
+}
