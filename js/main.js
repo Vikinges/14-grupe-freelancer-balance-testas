@@ -31,101 +31,38 @@ let month =['January',
 
 
 
-const DOM = document.querySelector('.table');
-console.log(DOM);
-let rows=1;
- let HTML = `<div class="table-head">
- <div class="cell">#</div>
- <div class="cell">Mėnuo</div>
- <div class="cell">Įplaukos</div>
- <div class="cell">Išlaidos</div>
- <div class="cell">Balansas</div>
-</div>
-<div class="table-content">
-<div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell">${account[1].income - account[1].expense } Eur</div>
-</div>
-<div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[4].income} Eur</div>
-<div class="cell">${account[4].expense}</div>
-<div class="cell">${ (account[1].income - account[1].expense) + account[4].income } Eur</div>
-</div><div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell"> Eur</div>
-</div><div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell">${account[1].income - account[1].expense } Eur</div>
-</div><div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell">${account[1].income - account[1].expense } Eur</div>
-</div><div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell">${account[1].income - account[1].expense } Eur</div>
-</div><div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell">${account[1].income - account[1].expense } Eur</div>
-</div><div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell">${account[1].income - account[1].expense } Eur</div>
-</div><div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell">${account[1].income - account[1].expense } Eur</div>
-</div><div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell">${account[1].income - account[1].expense } Eur</div>
-</div><div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell">${account[1].income - account[1].expense } Eur</div>
-</div><div class="table-row">
-<div class="cell">${rows++}</div>
-<div class="cell">${month[rows-2]}</div>
-<div class="cell">${account[1].income} Eur</div>
-<div class="cell">${account[1].expense}</div>
-<div class="cell">${account[1].income - account[1].expense } Eur</div>
-</div>
-</div>
-<div class="table-footer">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell">0.00 Eur</div>
-                    <div class="cell">0.00 Eur</div>
-                    <div class="cell">0.00 Eur</div>
-                </div>`    
-DOM.innerHTML = HTML;       
-// console.log(month);
+            let table = document.querySelector('.table-content');
+
+            console.log(table);
+            let HTML = '';
+            
+             function get(elemement) {
+                for (let i=0; i<elemement.length; i++) {
+                 HTML += `<div class="table-row">
+                            <div class="cell">1</div>
+                            <div class="cell">${month[i]}</div>
+                            <div class="cell">${account[i].income || 0}</div>
+                            <div class="cell">${account[i].expense || 0}</div>
+                            <div class="cell">${(account[i].income || 0) - (account[i].expense || 0) }</div>
+                        </div>`;
+                }
+             }
+            
+             get(months);
+            
+              function sum(elem, ) {
+                for (let a=0; a<elem.length; a++) {
+                 HTML += `<div class="table-footer">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell">0.00 Eur</div>
+                        <div class="cell"></div>
+                    </div>`;
+                }
+              }
+            
+            table.innerHTML = HTML;
 console.log(account);
 
 function skay(month){
