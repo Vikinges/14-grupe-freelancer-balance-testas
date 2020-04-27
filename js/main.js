@@ -41,15 +41,12 @@ let month =['January',
     for (let i=0; i<data.length; i++) {
         HTML += `<div class="table-row">
                 <div class="cell">${men++}</div>
-                <div class="cell">${month[i]}</div>
-                <div class="cell">${account[i].income || 0}</div>
-                <div class="cell">${account[i].expense || 0}</div>
+                <div class="cell">   ${month[i]}</div>
+                <div class="cell"> ${account[i].income  || 0}</div>
+                <div class="cell"> ${account[i].expense || 0}</div>
                 <div class="cell">${(account[i].income || 0) - (account[i].expense || 0) }</div>
             </div>`;
     }
- 
-
-
 
 }
             
